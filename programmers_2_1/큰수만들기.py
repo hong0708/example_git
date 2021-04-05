@@ -11,10 +11,10 @@ left = len(num) - k
 loc = 0
 
 while left > 0:
-    if left == 1:
-        loc = num.index(max(num[:]))
-    else:
+    if left == 0:
         loc = num.index(max(num[:-left+1]))
+    else:
+        loc = num.index(max(num[:]))
 
     answer += num[loc]
     left -= 1
