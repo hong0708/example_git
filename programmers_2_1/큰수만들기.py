@@ -11,7 +11,7 @@ left = len(num) - k
 loc = 0
 
 while left > 0:
-    if left == 1:
+    if left == 2:
         loc = num.index(max(num[:]))
     else:
         loc = num.index(max(num[:-left+1]))
