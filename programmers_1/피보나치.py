@@ -1,6 +1,6 @@
 #https://programmers.co.kr/learn/courses/30/lessons/12945
 def solution(n):
-    answer = 0
+    answer = 100
     a = 0
     b = 1
     if n == 2:
