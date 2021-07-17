@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.thinlineit.ctrlf.R
+import com.thinlineit.ctrlf.databinding.FragmentNotesBinding
 import com.thinlineit.ctrlf.databinding.ListItemNoteBinding
 import com.thinlineit.ctrlf.notes.NoteDao
 import com.thinlineit.ctrlf.notes.NotesAdapter
@@ -19,8 +20,9 @@ class ListAdapter(list: ArrayList<ContentList>) : RecyclerView.Adapter<ListAdapt
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
         //= ViewHolder.from(parent)
     {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.main_lv_item,parent,false)
-        return ViewHolder(view)
+        val view = LayoutInflater.from(parent.context)
+        val dataBinding = DataBindingUtil.inflate<FragmentNotesBinding>(view,R.layout.main_lv_item,parent,false)
+        return ViewHolder(dataBinding)
     }
 
     override fun getItemCount(): Int = mList.size
