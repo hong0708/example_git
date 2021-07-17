@@ -13,7 +13,7 @@ import com.thinlineit.ctrlf.notes.NotesAdapter
 import kotlinx.android.synthetic.main.main_lv_item.view.*
 
 class ListAdapter(list: ArrayList<ContentList>) : RecyclerView.Adapter<ListAdapter.ViewHolder>(){
-    //var mList: ArrayList<ContentList> = list
+    //var mList: ArrayList<ContentList> = list 
     var mList = ArrayList<ContentList>()
     var noteList = listOf<NoteDao>()
 
