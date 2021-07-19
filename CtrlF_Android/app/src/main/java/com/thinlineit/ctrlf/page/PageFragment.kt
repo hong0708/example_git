@@ -1,8 +1,10 @@
 package com.thinlineit.ctrlf.page
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
@@ -22,13 +24,11 @@ class PageFragment : Fragment() {
 
     lateinit var contextadapter : ListAdapter
 
-    var contentlist = arrayListOf<ContentList>(
-        ContentList("a"),
-        ContentList("b"),
-        ContentList("c"),
-        ContentList("d"),
-        ContentList("e"),
-        ContentList("f")
+    var contentlist = arrayListOf<PageDao>(
+        PageDao(1,"asd1",1,"ddd"),
+        PageDao(1,"asd2",1,"ddd"),
+        PageDao(1,"asd3",1,"ddd"),
+        PageDao(1,"asd4",1,"ddd")
     )
 
     override fun onCreateView(
@@ -46,30 +46,8 @@ class PageFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        contextadapter = ListAdapter(contentlist)
+        contextadapter = ListAdapter()
         binding.PageListRecyclerView.adapter = contextadapter
-
-        //binding.left_drawer.adapter = contextadapter
-        //binding.leftDrawer.adapter = contextadapter
-        //var drawer_List = view?.findViewById<ListView>(R.id.left_drawer)
-        //adapter = ListAdapter(contentlist)
-        //drawer_List?.adapter = adapter
-
-        //left_drawer!!.layoutManager = LinearLayoutManager(activity)
-        //left_drawer!!.adapter = adapter
-
-        //appBarConfiguration = AppBarConfiguration(navController.graph)
-
-        /*
-        mDrawerToggle = ActionBarDrawerToggle(this, dl_main_drawer_root, toolbar, R.string.open, R.string.close)
-        mDrawerToggle!!.syncState()
-
-
-        alarm_hamburger_startpage.setOnClickListener {
-            // set action here
-
-            dl_main_drawer_root!!.closeDrawer(GravityCompat.START)
-        }*/
 
         return binding.root
     }

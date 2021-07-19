@@ -23,8 +23,13 @@ class PageViewModel(noteId: Int) : ViewModel() {
 
     val content = Transformations.map(pageInfo) { it.content }
 
+    //val title = Transformations.map(_noteInfo) { it.title }
+
+    //val alertLiveData = MutableLiveData<String>()
+
     init {
         loadPage(1)
+        loadNoteInfo()
     }
 
     private fun loadPage(pageId: Int) {
