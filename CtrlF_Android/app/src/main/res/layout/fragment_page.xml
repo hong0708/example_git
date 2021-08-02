@@ -40,7 +40,7 @@
             android:divider="@android:color/transparent"
             android:dividerHeight="0dp"
             tools:listitem="@layout/main_lv_item"
-            app:data="@{pageViewModel.noteInfo.topicList}"
+            app:data="@{pageViewModel.topicList}"
             />
 
     </androidx.drawerlayout.widget.DrawerLayout>

@@ -48,7 +48,6 @@ class PageFragment : Fragment() {
 
         contextadapter = ListAdapter()
         binding.PageListRecyclerView.adapter = contextadapter
-
         return binding.root
     }
 
@@ -64,7 +63,6 @@ class PageFragment : Fragment() {
                 // navigate to settings screen
                 //nv_main_navigation_root.setNavigationItemSelectedListener(this) //navigation 리스너
                 dl_main_drawer_root.openDrawer(GravityCompat.START)
-
                 true
             }
 

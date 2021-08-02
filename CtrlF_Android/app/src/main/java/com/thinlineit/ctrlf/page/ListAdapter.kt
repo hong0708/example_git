@@ -4,12 +4,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.thinlineit.ctrlf.R
-import com.thinlineit.ctrlf.databinding.FragmentNotesBinding
-import com.thinlineit.ctrlf.databinding.ListItemNoteBinding
 import com.thinlineit.ctrlf.databinding.MainLvItemBinding
 import com.thinlineit.ctrlf.notes.NoteDao
 import com.thinlineit.ctrlf.notes.TopicDao
@@ -17,7 +14,8 @@ import com.thinlineit.ctrlf.util.BindingRecyclerViewAdapter
 import kotlinx.android.synthetic.main.main_lv_item.view.*
 
 class ListAdapter() :
-    RecyclerView.Adapter<ListAdapter.ViewHolder>(),BindingRecyclerViewAdapter<List<TopicDao>> {
+    RecyclerView.Adapter<ListAdapter.ViewHolder>(),BindingRecyclerViewAdapter<List<TopicDao>>{
+
     //var mList: ArrayList<ContentList> = list
     //val mList : ArrayList<PageDao>
     var mList = listOf<TopicDao>()
@@ -66,6 +64,7 @@ class ListAdapter() :
             {
                 itemView.setOnClickListener {
                     Log.d(tag,"checklist()")
+
                 }
             }
         }
@@ -85,8 +84,9 @@ class ListAdapter() :
     }
 
     override fun setData(data: List<TopicDao>) {
-        TODO("Not yet implemented")
+        //TODO("Not yet implemented")
         mList = data
         notifyDataSetChanged()
     }
+
 }
