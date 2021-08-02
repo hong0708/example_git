@@ -25,6 +25,8 @@
 
 - 현재 수정된 상태  
 ![image](https://user-images.githubusercontent.com/22022393/127854276-20a0f6a7-1d07-486b-a4e6-abea825f0994.png)  
+![image](https://user-images.githubusercontent.com/22022393/127857818-bb1e6ed0-8b9a-4248-81ad-1a1059d007bb.png)  
+  
 
 all 의 경우 받아온 결과가 나온 것을 확인 가능  
 
