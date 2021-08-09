@@ -79,8 +79,8 @@ ViewModel을 서로 다른 Activity에서 선언하면 서로 다른 lifecycle�
 
 
 
-공유 방법
-공유할 ViewModel 정의
+공유 방법  
+공유할 ViewModel 정의  
 
 ```Kotlin
 class MyViewModel : ViewModel() {
