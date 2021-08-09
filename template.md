@@ -123,17 +123,6 @@ myViewModel = ViewModelProvider(activity as ViewModelStoreOwner)[MyViewModel::cl
 myViewModel = ViewModelProvider(requireActivity())[MyViewModel::class.java]
 ```
 
-requireActivity는 getActivity가 null일 경우 IllegalStateException을 던진다.
-
-그래서 개인적으로는 이렇게 확장 함수를 하나 만들어서 사용하고 있다.
-```Kotlin
-fun Fragment.getViewModelStoreOwner(): ViewModelStoreOwner = try {
-    requireActivity()
-} catch (e: IllegalStateException) {
-    this
-}
-myViewModel = ViewModelProvider(getViewModelStoreOwner())[MyViewModel::class.java]
-```
 
 ---
 ## Reference
