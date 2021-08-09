@@ -86,7 +86,7 @@ ViewModel을 서로 다른 Activity에서 선언하면 서로 다른 lifecycle�
 class MyViewModel : ViewModel() {
     // ...
 }
-
+```
 
 Activity에서 선언하기
 
